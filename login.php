@@ -7,11 +7,15 @@
 </head>
 
 <body>
-
     <?php require_once 'header.php'; ?>
-    
+    <?php
+    if(isset($_GET['msg']))
+    {
+        echo "<div class='msg'>" .$_GET['msg']. "</div>";
+    }
+    ?>
     <div class="container home">
-        <form action="backend/meldingenController.php" method="POST">
+        <form action="backend/loginController.php" method="POST">
         <div class="form-group">
             <label for="username">Gebruikersnaam:</label>
             <input type="text" name="username" id="username">
