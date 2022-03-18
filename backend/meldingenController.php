@@ -1,5 +1,11 @@
 <?php
-
+session_start();
+if(!isset($_SESSION['user_id']))
+{
+    $msg = echo "<divclass='msg'>" ."Je moet eerst inloggen!". "</div>";
+    header("Location:login.php"$msg);
+    exit;
+}
 //Variabelen vullen
 $attractie = $_POST['attractie'];
 $type_ = $_POST['type_'];
@@ -36,3 +42,4 @@ $statement->execute
 ]);
 
 header("Location: ../index.php");
+?>
