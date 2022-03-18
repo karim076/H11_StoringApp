@@ -1,5 +1,4 @@
 <?php
-
 //Haal de configuratie op
 require_once 'config.php';
 
