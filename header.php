@@ -9,10 +9,11 @@
         </nav>
         <div>
             <?php
-            if(!isset($_SESSION['user_id'])): ?>
+            session_start();
+            if(isset($_SESSION['user_id'])): ?>
                 <p><a href="<?php echo $base_url; ?>/login.php">inloggen</a></p>
-            <?php else: ?><p>
-                <a href="<?php echo $base_url; ?>/logout.php">uitloggen</a></p>
+            <?php else: ?>
+                <p><a href="<?php echo $base_url; ?>/logout.php">uitloggen</a></p>
             <?php endif; ?>
         </div>
     </div>
