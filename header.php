@@ -9,6 +9,7 @@
         </nav>
         <div>
             <?php
+            error_reporting(E_ERROR | E_WARNING | E_PARSE); 
             session_start();
             if(isset($_SESSION['user_id'])): ?>
                 <?php echo "hello, <strong>", $_SESSION["user_name"], "</strong>"?>
