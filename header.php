@@ -11,9 +11,10 @@
             <?php
             session_start();
             if(isset($_SESSION['user_id'])): ?>
-                <p><a href="<?php echo $base_url; ?>/login.php">inloggen</a></p>
+                <?php echo "hello, <strong>", $_SESSION["user_name"], "</strong>"?>
+                <p><a href="<?php echo $base_url; ?>/logout.php">Uitloggen</a></p>
             <?php else: ?>
-                <p><a href="<?php echo $base_url; ?>/logout.php">uitloggen</a></p>
+                <p><a href="<?php echo $base_url; ?>/login.php">Inloggen</a></p>
             <?php endif; ?>
         </div>
     </div>
